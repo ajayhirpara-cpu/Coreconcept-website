@@ -36,7 +36,7 @@
                 <a href="#why-ai">Why AI?</a>
                 <a href="#why-coreconcept">Why Us?</a>
                 <a href="#classroom">Classroom</a>
-                <a href="#subjects">Subjects</a>
+                <a href="#subjects">Courses</a>
                 <a href="#dashboard" class="login-btn" style="display: none;"><i class="fas fa-lock"></i> Parent
                     Login</a>
             </nav>
@@ -231,22 +231,34 @@
     </section>
 
     <!-- Section 6: Subjects Offered -->
-    <section class="section bg-light text-center" id="subjects">
+    <section class="section bg-light" id="subjects">
         <div class="container">
-            <h2>Core <span class="text-light-blue">Subjects</span> Offered</h2>
+            <div class="section-header text-center">
+                <h2>Core <span class="text-light-blue">Courses</span></h2>
+                <p>Focused 30-minute daily learning sessions for each course.</p>
+            </div>
 
-            <div class="subjects-grid mt-5">
-                <div class="subject-card math">
-                    <div class="subj-icon"><i class="fas fa-divide"></i></div>
-                    <h3>Mathematics</h3>
+            <div class="flex-cards mt-5"
+                style="justify-content: center; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <div class="mentor-card">
+                    <i class="fas fa-divide mentor-icon"></i>
+                    <h4>Mathematics</h4>
                 </div>
-                <div class="subject-card science">
-                    <div class="subj-icon"><i class="fas fa-microscope"></i></div>
-                    <h3>Science</h3>
+                <div class="mentor-card">
+                    <i class="fas fa-microscope mentor-icon"></i>
+                    <h4>Science</h4>
                 </div>
-                <div class="subject-card english">
-                    <div class="subj-icon"><i class="fas fa-comment-dots"></i></div>
-                    <h3>English</h3>
+                <div class="mentor-card">
+                    <i class="fas fa-comment-dots mentor-icon"></i>
+                    <h4>English</h4>
+                </div>
+                <div class="mentor-card">
+                    <i class="fas fa-language mentor-icon"></i>
+                    <h4>Languages</h4>
+                </div>
+                <div class="mentor-card">
+                    <i class="fas fa-globe-americas mentor-icon"></i>
+                    <h4>Social Science</h4>
                 </div>
             </div>
         </div>
@@ -297,7 +309,7 @@
                     <i class="fas fa-star text-warning"></i>
                     <i class="fas fa-star text-warning"></i>
                     <p class="mt-2 text-sm">"The perfect after-school routine for my child. Structured, disciplined, and
-                        insightful." Mr. Jignesh Patel</p>
+                        insightful." <br> Mr. Jignesh Patel</p>
                 </div>
             </div>
         </div>
@@ -314,7 +326,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h4>Address</h4>
-                            <p>"Kaivalm" 120, Chitrakutdham,<br>Behind Crystal Mall, Kalawad Road, Rajkot — 360005</p>
+                            <p>120, Chitrakutdham, Behind Crystal Mall<br>Kalawad Road, Rajkot — 360005</p>
                         </div>
                     </div>
 
@@ -344,20 +356,22 @@
                     <form class="demo-form" id="bookingForm">
                         <div class="form-group">
                             <label>Parent Name</label>
-                            <input type="text" placeholder="Enter name" required>
+                            <input type="text" id="parentName" placeholder="Enter name" required>
                         </div>
                         <div class="form-group">
                             <label>Student Grade</label>
-                            <select required>
+                            <select id="studentGrade" required>
                                 <option value="">Select Grade</option>
-                                <option>Grade 5-7</option>
-                                <option>Grade 8-10</option>
-                                <option>Grade 11-12</option>
+                                <option>5th</option>
+                                <option>6th</option>
+                                <option>7th</option>
+                                <option>8th</option>
+                                <option>9th</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Phone Number</label>
-                            <input type="tel" placeholder="Enter phone" required>
+                            <input type="tel" id="phoneNumber" placeholder="Enter phone" required>
                         </div>
                         <button type="submit" class="btn btn-primary w-100 mt-2">Submit Request</button>
                     </form>
@@ -369,8 +383,8 @@
     <!-- Section 10: Final CTA & Footer -->
     <footer class="footer">
         <div class="container text-center">
-            <h2 class="mb-4 text-white">✨ Smart Parents Don’t Wait for Failure,<span class="text-light-blue">They build Strength 
-                    Early.</span></h2>
+            <h2 class="mb-4 text-white">✨ Smart Parents Don’t Wait for Failure, <span class="text-light-blue">AI-powered
+                    They build Strength Early..</span></h2>
             <div class="footer-ctas mb-5">
                 <a href="#booking" class="btn btn-primary btn-lg"><i class="fas fa-calendar-plus"></i> Book a Free
                     Visit</a>
