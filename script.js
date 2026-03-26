@@ -61,19 +61,29 @@ document.addEventListener('DOMContentLoaded', () => {
         bookingForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Dummy logic for submission state
+            // Save submitted details
+            const parentName = document.getElementById('parentName').value;
+            const studentGrade = document.getElementById('studentGrade').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            
+            // Redirect on WhatsApp with these details
+            const whatsappNumber = "919327651397";
+            const message = `Hello, I would like to book a free classroom visit.\n\n*Details:*\nParent Name: ${parentName}\nStudent Grade: ${studentGrade}\nPhone Number: ${phoneNumber}`;
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            
+            // UI submission state
             const btn = bookingForm.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
             
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Redirecting...';
             btn.disabled = true;
             
             setTimeout(() => {
-                alert('Thank you! Your demo visit request has been received. A mentor will contact you shortly.');
+                window.open(whatsappUrl, '_blank');
                 bookingForm.reset();
                 btn.innerHTML = originalText;
                 btn.disabled = false;
-            }, 1000);
+            }, 800);
         });
     }
 
